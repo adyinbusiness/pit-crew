@@ -424,7 +424,7 @@ var CREWS=[
  {n:"November Rookies",tag:'<span class="tag rookie">For new hires</span>',c:"var(--live)",hex:"#FFB020",ph:"rookies",m:function(){return "Everyone who started this month"},cnt:"5/8"},
  {n:"Lunch Loop",c:"var(--walk)",hex:"#2EE59D",ph:"walk",m:function(){return slot("Tue and Thu",0)+' &middot; <b style="color:var(--text)">4 departments</b>'},cnt:"6/8"},
  {n:"Bldg 4 Striders",c:"var(--trail)",hex:"#22D3EE",ph:"walk2",m:function(){return slot("Mon and Wed",-10)+" &middot; 2 departments"},cnt:"7/8"},
- {n:"Women\u2019s Walk & Talk",tag:'<span class="tag" style="box-shadow:inset 0 0 0 1px rgba(167,139,250,.7)">Women&rsquo;s crew</span>',c:"var(--games)",hex:"#A78BFA",ph:"hike",m:function(){return slot("Fri",5)+" &middot; 5 departments"},cnt:"6/8"}];
+ {n:"Women\u2019s Walk & Talk",tag:'<span class="tag">Women&rsquo;s crew</span>',c:"var(--games)",hex:"#A78BFA",ph:"hike",m:function(){return slot("Fri",5)+" &middot; 5 departments"},cnt:"6/8"}];
 function slot(days,off){var base={"1st":[12,10],"2nd":[19,40],"3rd":[3,10]}[S.shift]||[12,10];var h=base[0],m=base[1]+off;if(m<0){m+=60;h-=1}var ap=h>=12?"PM":"AM",h12=h%12||12;return days+" "+h12+":"+(m<10?"0":"")+m+" "+ap}
 function CN(){var c=S.crews.filter(function(x){return x!=="November Rookies"});return esc(c.length?c[0]:(S.crews[0]||"Lunch Loop"))}
 var TEAMS={"Lunch walks":"Walking Team","Hiking":"Trail Team","Cycling":"Ride Team","Board games":"Game Night Team","Volunteering":"Volunteer Team","Pickup sports":"Pickup Sports Team"};
